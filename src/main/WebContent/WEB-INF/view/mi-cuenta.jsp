@@ -205,75 +205,65 @@
       </div>
     </nav>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-	
-	<h1>Mi Cuenta</h1>
+     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+      
+<h1>Mi Cuenta</h1>
 
 
-    </main>
-  </div>
-</div>
+	<form action="findAll" method="get">
+	<%-- <input type="search" id="busqueda" name="busqueda" value="${busqueda}">
+	<button type="submit"  class="btn btn-primary">Busqueda</button> --%>	
+	</form>
+	<br>
+	<br>
+	<%-- 
+	<button type="button" class="btn btn-dark btn-lg"><a href="${pageContext.request.contextPath}/usuarios/frmAdd" ><svg svg style="color: white;  text-decoration: none;xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg> </a></button>  --%>
+	<div class="table-responsive">
+	<thead>
+		<tr>
+			<th data-field="idUsuario" >ID: 1</th> <br><br>
+			<th data-field="Cedula" >Cedula: 1756984526</th> <br><br>
+			<th data-field="1er Nombre" >Nombre1: Karla</th> <br><br>
+			 <th data-field="2do Nombre" >Nombre2: Dayana</th> <br><br>
+			<th data-field="1er Apellido" >Apellido1: Vaca</th> <br><br>
+			 <th data-field="2do Apellido" >Apellido2: Morales</th> <br><br>
+			<th data-field="Fecha de Nacimiento" >Fecha Nacimiento: 09-12-2009</th> <br><br>
+			 <th data-field="Edad" >Edad: 13</th> <br><br>
+			<th data-field="Sexo" >Sexo: Femenino</th> <br><br>
+			<th data-field="Direccion">Direccion: Quito</th> <br><br>
+			<th data-field="Telefono" >Telefono: 0985642147</th> <br><br>
+			 <th data-field="Correo">Correo: Karla123@gmail.com</th> <br><br>
+			 <th data-field="Tipo Usuario" >Tipo: Admin</th> <br><br>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+	<br>
 
-	  <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
       <script src="${pageContext.request.contextPath}/resources/js/dashboard.js"></script>
-
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.6.3.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js" ></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
-
-
-    <div class="container text-center">
-    <div class="row align-items-start">
-  		<table>
-		<thead>
-			<tr>
-				<th scope="col"> nombre1</th>
-				<th scope="col">nombre2</th>
-				<th scope="col">apellido1</th>
-				<th scope="col">apellido2</th>
-				<th scope="col">sexo</th>
-				<th scope="col">direccion</th>
-				<th scope="col">telefono</th>
-				<th scope="col">correo</th>
-				<th scope="col">tipo</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="item" items="${usuarios}">
-				<tr>
-					<td>${item.nombre1}</td>
-					<td>${item.nombre2}</td>
-					<td>${item.apellido1}</td>
-					<td>${item.apellido2}</td>
-					<td>${item.sexo}</td>
-					<td>${item.direccion}</td>
-					<td>${item.telefono}</td>
-					<td>${item.correo}</td>
-					<td>${item.tipo}</td>
-
-					<td>
-					<%-- <button type="button" class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/usuarios/findOne?id=${item.id}&opcion=1">Actualizar</a></button>
-				    <button type="button" class="btn btn-outline-danger" class="btn btn-danger"><a href="${pageContext.request.contextPath}/usuarios/findOne?id=${item.id}&opcion=2" >Cancelar</a></button> --%>
-					
-					<button type="button" class="btn btn-success" ><a href="${pageContext.request.contextPath}/usuarios/findOne?id=${item.id}&opcion=1" ><svg style="color: white; text-decoration: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path></svg></a></button>
-				    <button type="button" class="btn btn-danger" ><a href="${pageContext.request.contextPath}/usuarios/findOne?id=${item.id}&opcion=2" ><svg style="color: white; text-decoration: none; xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></a></button>
-					
-					
-					</td> 
-				</tr>
-
-
-
-			</c:forEach>
-		</tbody>
-	</table>
-      
-  
-      
-    </div>
-  </div>	
-
+    
+     <script>
+	    var $tabla1 = $('#tabla1')
+	
+		  $(function() {
+		    $tabla1.bootstrapTable({
+		      sortReset: true
+		    })
+		    
+		  })
+</script> 
 </body>
 </html>

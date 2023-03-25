@@ -65,6 +65,8 @@ public class LoginsDAOImpl implements LoginsDAO {
 	@Override
 	@Transactional
 	public Logins validar(String usuario, String clave) {
+		
+		
 		Session session= sessionFactory.getCurrentSession();
 		Query query = session.createQuery(
 			"Select US "

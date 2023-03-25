@@ -4,6 +4,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<style><%@include file="/resources/css/perzonil.css"%></style>
+<script><%@include file="/resources/js/perzonil.js"%></script>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -91,6 +93,9 @@
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/themes/default.min.css"/>
+	
+		
 
   </head>
   
@@ -102,13 +107,21 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="navbar-nav">
+  <div class="navbar-nav">  		
     <div class="nav-item text-nowrap">
-       <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
-    </div>
+    
+    	<!--  -->
+			
+    	<!--  -->
+    
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+   </div>
   </div>
 </header>
-
+<hr>
+<div class="container text-center">
+<iframe title="eventos (1)" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=19b04216-30c3-41f6-b9ac-3b638bc4e80c&autoAuth=true&ctid=5489579d-44b5-4792-af49-e9be4633a3d5" frameborder="0" allowFullScreen="true"></iframe>
+</div>
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -202,8 +215,10 @@
 
 	<hr>	
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 	
+
+
 
 </body>
 </html>

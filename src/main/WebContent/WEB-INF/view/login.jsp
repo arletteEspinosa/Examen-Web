@@ -21,6 +21,7 @@
                 <form method="post" action="login">
                     <input type="text" id="usuario" class="fadeIn second" name="usuario" placeholder="USUARIO">
                     <input type="text" id="contrasena" class="fadeIn third" name="contrasena" placeholder="CONTRASEÑA">
+                    <p style = "color: RED">campos vacios</p>
                     <input type="submit" class="fadeIn fourth" value="INICIAR">
                 </form>
 
